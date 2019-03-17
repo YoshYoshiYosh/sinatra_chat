@@ -1,0 +1,35 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="簡単なチャットを投稿できるサービスです">
+  <title>チャットアップ</title>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+</head>
+<body>
+<div class="l-wrapper">
+  <header class="l-header">
+    <div class="l-header__inner">
+    </div>
+  </header>
+  <main class="l-main">
+    <div class="l-main__inner">
+    <h1 class="main__section-title">ChatApp</h1>
+    <% @chats.each do |chat|%>
+      <span class="main__chats"><%= chat.text %></span><br>
+    <% end %>
+    </div>
+    <div class="l-main__input">
+      <form action="/create_chat" method="POST" class="l-main__input__form">
+        <input type="text" name="text" placeholder="ここに入力" class="form__text">
+        <input type="submit" value="投稿する" class="btn btn-submit">
+      </form>
+    </div>
+  </main>
+  <footer class="l-footer">
+    <div class="l-footer__inner">
+    </div>
+  </footer>
+</div>
+</body>
+</html>
