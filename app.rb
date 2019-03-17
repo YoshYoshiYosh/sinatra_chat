@@ -25,6 +25,7 @@ end
 post '/create_chat' do
   @chat = Chat.new(text: params[:text])
   if @chat.save
+    puts "成功！"
     redirect '/'
   else
     puts "失敗"
