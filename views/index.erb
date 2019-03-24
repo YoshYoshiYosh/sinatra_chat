@@ -3,33 +3,31 @@
   <meta charset="utf-8">
   <meta name="description" content="簡単なチャットを投稿できるサービスです">
   <title>チャットアップ</title>
-  <%# <link rel="stylesheet" href="/style.css"> %>
-  <%# <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"> %>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
 <div class="container">
-  <header class="l-header">
-    <div class="l-header__inner">
+  <header class="header">
+    <div class="header__inner">
     </div>
   </header>
-  <main class="l-main">
-    <div class="l-main__inner">
+  <main class="main">
+    <div class="main__inner">
     <h1 class="main__section-title">ChatApp</h1>
     <% @chats.each do |chat|%>
       <span class="main__chats"><%= chat.text %></span><br>
     <% end %>
     </div>
-    <div class="l-main__input">
-      <form action="/create_chat" method="POST" class="l-main__input__form">
+    <div class="main__input">
+      <form action="/create_chat" method="POST" class="main__input__form">
         <input type="text" name="text" placeholder="ここに入力" class="form__text">
         <input type="submit" value="投稿する" class="btn btn-submit">
       </form>
     </div>
   </main>
-  <footer class="l-footer">
-    <div class="l-footer__inner">
+  <footer class="footer">
+    <div class="footer__inner">
     </div>
   </footer>
 </div>
