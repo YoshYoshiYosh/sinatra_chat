@@ -53,3 +53,4 @@ build-iPhoneSimulator/
 .rvmrc
 
 *.sqlite3
+script.js
