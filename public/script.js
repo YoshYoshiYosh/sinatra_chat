@@ -2,10 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let form = document.querySelector('form')
   let messages = document.querySelector('#messages')
 
-  // document.querySelector('.main__chats').onclick = (e) => {
-  //   alert(e.target.tagName)
-  // }
-
   form.onsubmit = async (e) => {
     alert('チェック1')
     e.preventDefault()
