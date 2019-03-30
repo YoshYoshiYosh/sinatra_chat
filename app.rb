@@ -17,16 +17,10 @@ get '/' do
   erb :index
 end
 
-
-#シェルの中で使えるへんす
-#ここにコマンドがあるということをPCに教えてあげるのが「パスを通す」ということ
-
-
-post '/create_chat' do
-  @chat = Chat.new(text: params[:text])
+post '/' do
+  @chat = Chat.new(text: params[:message])
   if @chat.save
     puts "成功！"
-    puts "成功その2!"
     redirect '/'
   else
     puts "失敗"
