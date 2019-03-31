@@ -17,16 +17,16 @@
       <h1 class="main__section-title">ChatApp</h1>
       <ul id="messages">
         <% @chats.each do |chat|%>
-          <li class="d-inline-block bg-dark rounded px-2 py-1 mb-2 text-light"><%= chat.text %></li><br>
+          <li class="d-inline-block bg-dark rounded px-2 py-1 mb-3 text-light"><%= chat.text %></li><br>
         <% end %>
       </ul>
     </div>
-    <div class="l-main__input">
-      <form class="l-main__input__form">
-        <input type="text" name="message" placeholder="ここに入力" class="form__text">
-        <input id="button" type="submit" value="投稿する" class="btn btn-submit">
-      </form>
-    </div>
+    <form class="input-group mb-3 col-md-5 col-12">
+        <input type="text" name="message" placeholder="ここに入力" class="form-control">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="submit" id="button-addon2">投稿する</button>
+        </div>
+    </form>
   </main>
   <footer class="footer">
     <div class="footer__inner">
