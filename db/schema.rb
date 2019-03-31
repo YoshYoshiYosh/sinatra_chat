@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_16_141018) do
+ActiveRecord::Schema.define(version: 2019_03_31_061428) do
 
   create_table "chats", force: :cascade do |t|
     t.string "text"
+    t.string "room"
   end
 
 end

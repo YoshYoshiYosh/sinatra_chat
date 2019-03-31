@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector('form');
   const messages = document.querySelector('#messages');
-
+  
   form.onsubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData();
