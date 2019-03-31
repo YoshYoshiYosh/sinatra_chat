@@ -8,6 +8,10 @@ class Chat < ActiveRecord::Base
   validates_presence_of :text
 end
 
+get '/' do
+  erb :root
+end
+
 get '/:room' do
   @chats = Chat.where(room: params[:room]).last(30)
   erb :index

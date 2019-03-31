@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (row.status === 200) {
       const newMessage = document.createTextNode(message);
       let newMessageElement = document.createElement("li");
-      let br = document.createElement('br')
+      const br = document.createElement('br')
       newMessageElement.className = 'd-inline-block bg-dark rounded px-2 py-1 mb-2 text-light'
       newMessageElement.appendChild(newMessage);
       messages.appendChild(newMessageElement);
