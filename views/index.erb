@@ -14,13 +14,15 @@
   </header>
   <main class="main">
     <div class="main__inner">
-    <h1 class="main__section-title">ChatApp</h1>
-    <% @chats.each do |chat|%>
-      <span class="d-inline-block bg-dark rounded px-2 py-1 mb-2 text-light"><%= chat.text %></span><br>
-    <% end %>
+      <h1 class="main__section-title">ChatApp</h1>
+      <ul id="messages">
+        <% @chats.each do |chat|%>
+          <li class="d-inline-block bg-dark rounded px-2 py-1 mb-2 text-light"><%= chat.text %></li><br>
+        <% end %>
+      </ul>
     </div>
     <div class="l-main__input">
-      <form class="l-main__input__form" name="send">
+      <form class="l-main__input__form">
         <input type="text" name="message" placeholder="ここに入力" class="form__text">
         <input id="button" type="submit" value="投稿する" class="btn btn-submit">
       </form>
