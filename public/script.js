@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector('form');
   const messages = document.querySelector('#messages');
-  
+
   form.onsubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData();
@@ -15,9 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
     
     if (row.status === 200) {
       const newMessage = document.createTextNode(message);
-      const newMessageElement = document.createElement("li");
+      let newMessageElement = document.createElement("li");
+      let br = document.createElement('br')
+      newMessageElement.className = 'd-inline-block bg-dark rounded px-2 py-1 mb-2 text-light'
       newMessageElement.appendChild(newMessage);
       messages.appendChild(newMessageElement);
+      messages.appendChild(br);
     }
   };
 });
