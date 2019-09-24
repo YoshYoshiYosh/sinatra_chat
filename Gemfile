@@ -10,3 +10,8 @@ gem 'sinatra-reloader'
 gem 'sinatra-activerecord'
 gem 'sqlite3', '~> 1.3.6'
 gem 'rake'
+
+group :test do
+  gem 'rspec'
+  gem 'rack-test'
+end
