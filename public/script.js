@@ -15,9 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
     
     if (row.status === 200) {
       const newMessage = document.createTextNode(message);
-      const newMessageElement = document.createElement("li");
+      let newMessageElement = document.createElement("li");
+      const br = document.createElement('br')
+      newMessageElement.className = 'd-inline-block bg-dark rounded px-2 py-1 mb-2 text-light'
       newMessageElement.appendChild(newMessage);
       messages.appendChild(newMessageElement);
+      messages.appendChild(br);
     }
   };
 });

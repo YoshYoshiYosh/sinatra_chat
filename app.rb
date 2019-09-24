@@ -9,19 +9,21 @@ class Chat < ActiveRecord::Base
 end
 
 get '/' do
-  # @chats = Chat.all.order.reverse[0...30]
-  # @chats = Chat.all.reverse_order.limit(30)
-  @chats = Chat.all.last(30)
+  erb :root
+end
+
+get '/:room' do
+  @chats = Chat.where(room: params[:room]).last(30)
   erb :index
 end
 
-post '/' do
-  @chat = Chat.new(text: params[:message])
+post '/:room' do
+  @chat = Chat.new(room: params[:room],text: params[:message])
   if @chat.save
     puts "成功！"
-    redirect '/'
+    status 200
   else
     puts "失敗"
-    redirect '/'
+    status 500
   end
 end
