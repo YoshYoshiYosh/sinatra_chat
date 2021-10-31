@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
       newMessageElement.appendChild(newMessage);
       messages.appendChild(newMessageElement);
       messages.appendChild(br);
+      form.message.value = ""
     }
   };
 });
